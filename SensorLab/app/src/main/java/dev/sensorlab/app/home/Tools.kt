@@ -18,7 +18,7 @@ import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.PhoneAndroid
 import androidx.compose.material.icons.filled.ShowChart
 import androidx.compose.material.icons.filled.Straighten
-import androidx.compose.material.icons.filled.ThreeDRotation
+import androidx.compose.material.icons.filled.ScreenRotation
 import androidx.compose.material.icons.filled.TrackChanges
 import androidx.compose.material.icons.filled.Vibration
 import androidx.compose.material.icons.filled.Waves
@@ -82,7 +82,7 @@ object Tools {
         ) { back, _ -> LevelScreen(back) },
         Tool(
             "attitude", "3D attitude", "Rotation vectors, quaternion, live model",
-            Icons.Filled.ThreeDRotation, ToolCategory.Orientation,
+            Icons.Filled.ScreenRotation, ToolCategory.Orientation,
             isAvailable = { it.has(Sensor.TYPE_ROTATION_VECTOR, Sensor.TYPE_GAME_ROTATION_VECTOR) },
         ) { back, _ -> AttitudeScreen(back) },
         Tool(
