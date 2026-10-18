@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: SensorLab
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -22,5 +25,5 @@ jobs:
         with:
           name: SensorLab-apk
           path: |
-            app/build/outputs/apk/debug/*.apk
-            app/build/outputs/apk/release/*.apk
+            SensorLab/app/build/outputs/apk/debug/*.apk
+            SensorLab/app/build/outputs/apk/release/*.apk
